@@ -10,9 +10,6 @@ with open("products.csv", "r" , encoding="utf-8") as f:
         # price = s[1]
         products.append([name, price])
        
-
-
-
 while True:
     name = input("請輸入商品名稱: ")
     if name == "q":
