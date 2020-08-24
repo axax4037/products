@@ -35,14 +35,15 @@ def write_file(filename, products):
             f.write(p[0] + "," + str(p[1]) + "\n")
 
 def main():
-    filename = "products.cvs"
+    filename = "products.csv"
     if os.path.isfile(filename):
         print("檔案存在")
         products = read_file(filename)
     else:
         print("No file")
+    
+    products = user_input(products)
+    print_products(products)
+    write_file("products.csv", products)
 
-products = read_file("products.csv")
-products = user_input(products)
-print_products(products)
-write_file("products.csv", products)
+main()
